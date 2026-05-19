@@ -38,10 +38,10 @@ def build_pipeline(num_attribs, cat_attribs):
 
 if not os.path.exists(MODEL_FILE):
     # Lets train the model
-    housing = pd.read_csv("housing.csv")
+housing = pd.read_csv("housing.csv")
 
     # Create a stratified test set
-    housing['income_cat'] = pd.cut(housing["median_income"], 
+housing['income_cat'] = pd.cut(housing["median_income"], 
                                 bins=[0.0, 1.5, 3.0, 4.5, 6.0, np.inf], 
                                 labels=[1, 2, 3, 4, 5])
 
